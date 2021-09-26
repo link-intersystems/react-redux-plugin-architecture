@@ -42,4 +42,8 @@ The main component will be rendered in the [public/index.html](public/index.html
 Install all node modules with `npm install` then start the application with
 
     npm start
+
+## Codesandbox
+
+A running example can be found at [codesandbox.io](https://codesandbox.io/s/react-redux-plugin-architecture-jktd8)
    
