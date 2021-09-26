@@ -36,4 +36,10 @@ If a plugin contains a reducer, it is configured under the id of the plugin. The
 The main component will be rendered in the [public/index.html](public/index.html) under the element with that id. E.g.
 
     <div id="counter">
+
+# RUN
+
+Install all node modules with `npm install` then start the application with
+
+    npm start
    
