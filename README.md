@@ -1,4 +1,4 @@
-This repository is an architecture proposal for plugin architectures in JavaScript. It is implemented with a pure React and and React-Redux plugin app.
+This repository is an architecture proposal for plugin architectures in JavaScript. Even though it is implemented with a pure React and and React-Redux plugin app, the concepts can be applied to any JavaScript application.
 
 # Goal
 
