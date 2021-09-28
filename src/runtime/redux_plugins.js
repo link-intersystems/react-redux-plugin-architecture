@@ -1,7 +1,7 @@
 import { configureStore as rtkConfigureStore } from "@reduxjs/toolkit";
 import monitorReducerEnhancer from "./monitorEnhancer";
 
-async function configureStore(plugins) {
+async function configureStore({ plugins, ...others }) {
   const getPluginReducerConfig = (plugin) => {
     if (plugin.reducer) {
       const reducerName = plugin.id;
@@ -29,6 +29,7 @@ async function configureStore(plugins) {
   });
 
   return {
+    ...others,
     plugins,
     store,
   };

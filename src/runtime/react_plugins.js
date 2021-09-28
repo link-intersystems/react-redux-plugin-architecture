@@ -1,9 +1,15 @@
 import ReactDOM from "react-dom";
 
-function render({ plugins, render }) {
-  plugins.forEach((plugin) => {
-    console.log("Init plugin", plugin);
+function defaultRender(component) {
+  return component;
+}
 
+function render({ plugins, render }) {
+  if (render == null) {
+    render = defaultRender;
+  }
+
+  plugins.forEach((plugin) => {
     const pluginSlot = getPluginSlot(plugin);
 
     if (pluginSlot == null) {
@@ -11,12 +17,14 @@ function render({ plugins, render }) {
       return;
     }
 
-    ReactDOM.render(render(plugin.mainComponent), pluginSlot);
+    try {
+      ReactDOM.render(render(plugin.mainComponent), pluginSlot, () => {});
+    } catch (e) {}
   });
 }
 
 function getPluginSlot(plugin) {
-  return  document.getElementById(plugin.id);
+  return document.getElementById(plugin.id);
 }
 
 export default render;

@@ -12,7 +12,7 @@
   "authors": [
     "René Link <rene.link@link-intersystems.com> (https://stackoverflow.com/users/974186/ren%c3%a9-link?tab=profile)"
   ],
-  "homepage": "https://github.com/link-intersystems/react-redux-plugin-architecture",
+  "homepage": "./",
   "repository": "github:link-intersystems/react-redux-plugin-architecture",
   "bugs": "https://github.com/link-intersystems/react-redux-plugin-architecture/issues",
   "dependencies": {
