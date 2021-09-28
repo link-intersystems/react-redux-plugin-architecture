@@ -2,7 +2,8 @@ import React from "react";
 import { Provider } from "react-redux";
 
 async function provideStore({ plugins, store }) {
-  const render = (component) => <Provider store={store}>{component}</Provider>;
+  const render = (children) =>
+    React.createElement(Provider, { plugins, store }, children);
 
   return {
     plugins,
